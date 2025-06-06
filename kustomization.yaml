@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
   - authentication/argocd-github-henryhoen-ssh.yaml
-  - applications/greenfield.yaml
+  - dev/argocd/projects/learn/project.yaml
+  - dev/argocd/projects/learn/bootstrap.yaml
