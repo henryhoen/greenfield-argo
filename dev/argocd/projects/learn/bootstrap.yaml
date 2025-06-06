@@ -14,7 +14,7 @@ spec:
   # Source of the Application's
   source:
     path: dev/argocd/projects/learn/apps
-    repoURL: git@github.com:henryhoen/greenfield-argocd.git # Can point to either a Helm chart repo or a git repo.
+    repoURL: git@github.com:henryhoen/greenfield-argo.git # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD # For Helm, this refers to the chart version.
   destination:
     # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
