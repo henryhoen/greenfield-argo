@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-github-henryhoen-ssh
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+stringData:
+  url: git@github.com:henryhoen
+  type: git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    QyNTUxOQAAACAoAwBMKtYhPdVAL+q0tFVdp2M3hNNmRLfFKGwOW7yyRQAAAJieU8ORnlPD
+    kQAAAAtzc2gtZWQyNTUxOQAAACAoAwBMKtYhPdVAL+q0tFVdp2M3hNNmRLfFKGwOW7yyRQ
+    AAAEBDtP/Zq2tFXhMOn1RG99cd6pEiyvMj2Omu6sEPRvyWbygDAEwq1iE91UAv6rS0VV2n
+    YzeE02ZEt8UobA5bvLJFAAAAEWFyZ29jZC1naXRodWItc3NoAQIDBA==
+    -----END OPENSSH PRIVATE KEY-----

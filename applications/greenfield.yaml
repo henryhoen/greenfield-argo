@@ -1,18 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: greenfield-test
+  name: greenfield
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-        - name: nginx
-          image: nginx:latest
-          ports:
-            - containerPort: 80
+  destination:
+    namespace: greenfield
+    server: https://kubernetes.default.svc
+  source:
+    path: .
+    repoURL: git@github.com:henryhoen/greenfield-cd.git
+    targetRevision: HEAD
+  project: learn
